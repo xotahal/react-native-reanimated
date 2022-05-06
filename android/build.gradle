@@ -83,7 +83,7 @@ def resolveReactNativeDirectory() {
     if (isDeveloperMode()) {
         return file("$projectDir/../node_modules/react-native")
     }
-    return file("$projectDir/../../react-native")
+    return file(findNodeModulePath(projectDir, "react-native"))
 }
 
 abstract class replaceSoTask extends DefaultTask {
